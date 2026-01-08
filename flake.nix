@@ -14,14 +14,18 @@
       type = "github";
       owner = "tgstation";
       repo = "rust-g";
+      flake = false;
     };
     dreamluau-repo = {
       type = "github";
       owner = "tgstation";
       repo = "dreamluau";
+      flake = false;
     };
     byond-zipped = {
-      url = "file+https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.1675_byond_linux.zip";
+      type = "tarball";
+      url = "https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.latest_byond_linux.zip";
+      flake = false;
     };
   };
 
@@ -55,16 +59,7 @@
             ))
         );
 
-        byond = pkgs.mkDerivation {
-          src = byond-zipped;
-          nativeBuildInputs = [pkgs.unzip];
-
-          postBuild = ''
-            mkdir -p $out
-            ls
-            exit 1
-          '';
-        };
+        byond = pkgs.callPackage ./byond.nix {inherit byond-zipped;};
 
         rustg-crate = pkgs.callPackage ./rust-g.nix {inherit crane' byond rustg-repo;};
         dreamluau-crate = pkgs.callPackage ./dreamluau.nix {inherit crane' byond;};

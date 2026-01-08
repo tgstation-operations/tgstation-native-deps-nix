@@ -4,16 +4,16 @@
   unzip,
   libpng,
   curl,
+  byond-zipped,
 }:
 stdenv.mkDerivation {
   pname = "byond";
   version = "516.1675";
 
-  src = ./byond.zip;
+  src = byond-zipped;
 
   nativeBuildInputs = [
     autoPatchelfHook
-    unzip
   ];
 
   buildInputs = [

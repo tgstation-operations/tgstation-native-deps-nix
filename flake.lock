@@ -3,13 +3,14 @@
     "byond-zipped": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-DoxjhdNM64reJBCMsTKeYx6Xrrv6RIAV0DUu5vxYkMc=",
-        "type": "file",
-        "url": "https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.1675_byond_linux.zip"
+        "lastModified": 1766454421,
+        "narHash": "sha256-K/y/qEsUEOVwtYQdEQcenca5RiDOQnP8mOedXdpqe0o=",
+        "type": "tarball",
+        "url": "https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.latest_byond_linux.zip"
       },
       "original": {
-        "type": "file",
-        "url": "https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.1675_byond_linux.zip"
+        "type": "tarball",
+        "url": "https://github.com/spacestation13/byond-builds/raw/refs/heads/master/public/516/516.latest_byond_linux.zip"
       }
     },
     "crane": {
